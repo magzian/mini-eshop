@@ -102,4 +102,14 @@ class CheckoutController extends Controller
             return back()->with('error', $e->getMessage());
         }
     }
+
+       public function success(Order $order){
+            if ($order->user_id !== auth()->id()) {
+            abort(403);
+        }
+
+        $order->load('items.product');
+        return view('checkout.success', compact('order'));
+       }
+    
 }
