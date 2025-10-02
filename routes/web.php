@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
