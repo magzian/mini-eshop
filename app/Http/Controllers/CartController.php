@@ -7,6 +7,8 @@ use App\Models\Product;
 
 class CartController extends Controller
 {
+
+    // typically we want to retrieve the cartItems and the total from a session in the index method
     public function index()
     {
         $cart = session()->get('cart', []);

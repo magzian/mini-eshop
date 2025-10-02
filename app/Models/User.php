@@ -42,8 +42,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function isAdmin(): bool
+    /* public function isAdmin(): bool
     {
         return $this->role === 'admin';
+    } */
+
+    public function isAdmin(): bool {
+        return $this->isAdmin === 1;
     }
 }
