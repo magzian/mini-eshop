@@ -4,6 +4,9 @@ namespace App\Policies;
 
 use App\Models\User;
 
+
+/* Policies are classes that organize authorization logic around a particular model or resource. */
+
 class ProductPolicy
 {
     public function viewAny(?User $user): bool

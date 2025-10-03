@@ -22,7 +22,7 @@ class ProductController extends Controller
 
 
 
-    public function store(StoreProductRequest $request): RedirectResponse
+    public function store(StoreProductRequest $request)
     {
         Product::create($request->validated());
         return redirect()->route('admin.products.index')->with('success', 'Product created successfully.');
@@ -33,14 +33,14 @@ class ProductController extends Controller
         return view('admin.products.edit', compact('product'));
     }
     
-    public function update(UpdateProductRequest $request, Product $product): RedirectResponse{
+    public function update(UpdateProductRequest $request, Product $product){
         $product->update($request->validated());
         return redirect()->route('admin.products.index')
         ->with('success', 'Product updated successfully.');
     }
     
 
-    public function destroy(Product $product): RedirectResponse{
+    public function destroy(Product $product){
         $product->delete();
         return redirect()->route('admin.products.index')
             ->with('success', 'Product deleted successfully.');

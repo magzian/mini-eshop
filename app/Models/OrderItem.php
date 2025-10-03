@@ -22,7 +22,7 @@ class OrderItem extends Model
         'line_total',
     ];
 
-    protected $casts = [
+    protected $casts = [ 
         'qty' => 'integer',
         'unit_price' => 'decimal:2',
         'line_total' => 'decimal:2',
