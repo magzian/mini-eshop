@@ -22,13 +22,32 @@ class UserSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        // Create Regular User
+      /*   // Create Regular User
         User::create([
             'name' => 'User',
             'email' => 'customer@demo.com',
             'password' => Hash::make('password'),
             'isAdmin' => false,
             'email_verified_at' => now(),
-        ]);
+        ]); */
+
+        // Create multiple customers
+
+        $customerName = [
+            'Customer', 'Jane Smith', 'Michael Johnson', 'Emily Williams',
+            'David Brown', 'Sarah Davis', 'James Miller', 'Linda Wilson',
+            'Robert Moore', 'Patricia Taylor', 'William Anderson', 'Jennifer Thomas',
+            'Richard Jackson', 'Mary White', 'Christopher Harris'
+        ];
+
+        foreach($customerName as $name) {
+            User::create([
+                'name' => $name,
+                'email' => strtolower(str_replace(' ', '.', $name)) . '@demo.com',
+                'password' => Hash::make('password'),
+                'isAdmin' => false,
+                'email_verified_at' => now(),
+            ]);
+        }
     }
 }
