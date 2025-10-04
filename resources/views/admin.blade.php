@@ -36,6 +36,35 @@
                 </div>
 
             </div>
+
+             <div class="py-6">
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div class="bg-white shadow-sm sm:rounded-lg p-6">
+                        <h2 class="mb-4 text-lg font-semibold text-gray-600">Top 5 best selling products</h2>
+                        <table class="table-auto w-full border-collapse border border-gray-200">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border px-4 py-2">#</th>
+                                    <th class="border px-4 py-2">Product Name</th>
+                                    <th class="border px-4 py-2">Total Sold</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse($bestProducts as $index => $product)
+                                    <tr>
+                                        <td class="border px-4 py-2">{{ $index + 1 }}</td>
+                                        <td class="border px-4 py-2">{{ $product->name }}</td>
+                                        <td class="border px-4 py-2">{{ $product->total_sold }}</td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="3" class="text-center py-4">No sales data found</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
         </div>
     </div>
 </x-app-layout>
