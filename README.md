@@ -17,7 +17,7 @@ Mini Shop Lite is a minimal e-commerce skeleton featuring:
 - **Authentication:** Laravel Breeze
 - **Database:** MySQL
 - **Frontend:** Blade Templates + Tailwind CSS
-- **API Authentication:** Laravel Sanctum
+
 
 ## Features
 
