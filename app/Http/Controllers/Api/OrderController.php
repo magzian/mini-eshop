@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreOrderRequest;
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\Product;
+use Illuminate\Support\Facades\DB; 
 
 class OrderController extends Controller
 {
@@ -48,7 +51,7 @@ class OrderController extends Controller
             }
 
             $order = Order::create([
-                'user_id' => auth()->id(),
+                'user_id' => auth('sanctum')->id(),
                 'total' => $total,
             ]);
 
