@@ -92,6 +92,7 @@ php artisan db:seed
 7. **Build frontend assets**
 ```bash
 npm run build
+npm run run dev
 ```
 
 8. **Start development server**
