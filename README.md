@@ -53,7 +53,7 @@ Mini Shop Lite is a minimal e-commerce skeleton featuring:
 1. **Clone the repository**
 ```bash
 git clone <repository-url>
-cd mini-shop-lite
+cd <your-directory-name>
 ```
 
 2. **Install dependencies**
@@ -73,14 +73,14 @@ php artisan key:generate
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=mini_shop_lite
+DB_DATABASE=mini_eshop
 DB_USERNAME=root
 DB_PASSWORD=your_password
 ```
 
 5. **Create database**
 ```bash
-mysql -u root -p -e "CREATE DATABASE mini_shop_lite;"
+mysql -u root -p -e "CREATE DATABASE mini_eshop;"
 ```
 
 6. **Run migrations and seed data**
